@@ -1,2 +1,4 @@
 # crayfish
-P. clarkii 16S and metagenomic analysis code
+16S and metagenomic analysis code for "The microbiome of Procambarus clarkii (crayfish) farmed under different growth conditions"
+
+- Updates are in progress
