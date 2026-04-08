@@ -21,4 +21,8 @@ Each sample folder has two files within, SAMPLE_1.fastq.gz and SAMPLE_2.fastq.gz
 
 The raw sample reads were not initially QC-ed. DEM057 was also reported to have a poor quality library with short inserts.
 
-Fastp (https://github.com/OpenGene/fastp) was used for trimming and QCing. I downloaded it off of conda for use, but you can also get it from Github directly. 
+## Packages used:
+- 010: Fastp (https://github.com/OpenGene/fastp) was used for trimming and QCing. I downloaded it off of conda for use, but you can also get it from Github directly.
+- 020: Metaspades used for assembly
+- 030: Bowtie2 and samtools used to create coverage .txt files for metabat2 and maxbin2
+- 031: Metabat2 and Maxbin2 used for binning
