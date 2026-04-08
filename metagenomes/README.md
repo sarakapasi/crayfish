@@ -12,6 +12,13 @@ Each sample folder has two files within, SAMPLE_1.fastq.gz and SAMPLE_2.fastq.gz
 - /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/3_metagenomes/DEM011/DEM011_1.fastq.qz and
 - /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/3_metagenomes/DEM011/DEM011_2.fastq.gz
 
+| Sample Name  | _1.fq.gz size | _2.fq.gz size |
+| ------------- | ------------- |------------- |
+| DEM011  | 1.73 GB  | 1.70 GB |
+| DEM015  | 4.48 GB  | 4.32 GB |
+| DEM057  | 3.23 GB  | 2.82 GB |
+| DEM093  | 2.65 GB  | 2.62 GB |
+
 The raw sample reads were not initially QC-ed. DEM057 was also reported to have a poor quality library with short inserts.
 
 Fastp (https://github.com/OpenGene/fastp) was used for trimming and QCing. I downloaded it off of conda for use, but you can also get it from Github directly. 
