@@ -28,6 +28,4 @@ if [[ ! -d "$SAMPLE_DIR" ]]; then
     exit 1
 fi
 
-cd "$SAMPLE_DIR"
-
-fastp -i ${SAMPLE_ID}_1.fastq.gz -I ${SAMPLE_ID}_2.fastq.gz -o ${SAMPLE_ID}-trimmed_1.fastq.gz -O ${SAMPLE_ID}-trimmed_2.fastq.gz -h ${SAMPLE_ID}_fastp.html -j ${SAMPLE_ID}_fastp.json -w 4
+fastp -i "${SAMPLE_DIR}_1.fastq.gz" -I ${SAMPLE_DIR}_2.fastq.gz -o "${SAMPLE_DIR}-trimmed_1.fastq.gz" -O "${SAMPLE_DIR}-trimmed_2.fastq.gz" -h "${SAMPLE_DIR}_fastp.html" -j "${SAMPLE_DIR}_fastp.json" -w 4
