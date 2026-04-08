@@ -5,6 +5,7 @@
 #SBATCH --mem=64GB
 #SBATCH -t 24:00:00
 #SBATCH -q inferno
+#SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --array=0-45%20
 #SBATCH -o /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/log/0408_010-fastp_out.16
 #SBATCH -e /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/log/0408_010-fastp_err.16
@@ -29,11 +30,4 @@ fi
 
 cd "$SAMPLE_DIR"
 
-fastp 
--i ${SAMPLE_ID}_1.fastq.gz \
--I ${SAMPLE_ID}_2.fastq.gz \
--o ${SAMPLE_ID}-trimmed_1.fastq.gz \
--O ${SAMPLE_ID}-trimmed_2.fastq.gz \
--h ${SAMPLE_ID}_fastp.html \
--j ${SAMPLE_ID}_fastp.json \
--w 4
+fastp -i ${SAMPLE_ID}_1.fastq.gz -I ${SAMPLE_ID}_2.fastq.gz -o ${SAMPLE_ID}-trimmed_1.fastq.gz -O ${SAMPLE_ID}-trimmed_2.fastq.gz -h ${SAMPLE_ID}_fastp.html -j ${SAMPLE_ID}_fastp.json -w 4
