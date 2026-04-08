@@ -2,11 +2,11 @@
 #SBATCH -J fastp
 #SBATCH -A gts-ktk3-coda20
 #SBATCH -n 4
-#SBATCH --mem=64GB
+#SBATCH --mem=100GB
 #SBATCH -t 24:00:00
 #SBATCH -q inferno
 #SBATCH --mail-type=BEGIN,END,FAIL
-#SBATCH --array=0-45%20
+#SBATCH --array=0-3%20
 #SBATCH -o /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/log/0408_010-fastp_out.16
 #SBATCH -e /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/log/0408_010-fastp_err.16
 
@@ -28,4 +28,4 @@ if [[ ! -d "$SAMPLE_DIR" ]]; then
     exit 1
 fi
 
-fastp -i "${SAMPLE_DIR}_1.fastq.gz" -I "${SAMPLE_DIR}_2.fastq.gz" -o "${SAMPLE_DIR}-trimmed_1.fastq.gz" -O "${SAMPLE_DIR}-trimmed_2.fastq.gz" -h "${SAMPLE_DIR}_fastp.html" -j "${SAMPLE_DIR}_fastp.json" -w 4
+fastp -i "${SAMPLE_DIR}/${SAMPLE_ID}_1.fastq.gz" -I "${SAMPLE_DIR}/${SAMPLE_ID}_2.fastq.gz" -o "${SAMPLE_DIR}/${SAMPLE_ID}-trimmed_1.fastq.gz" -O "${SAMPLE_DIR}/${SAMPLE_ID}-trimmed_2.fastq.gz" -h "${SAMPLE_DIR}/${SAMPLE_ID}_fastp.html" -j "${SAMPLE_DIR}/${SAMPLE_ID}_fastp.json" -w 4
