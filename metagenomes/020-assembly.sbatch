@@ -6,7 +6,7 @@
 #SBATCH -t 24:00:00
 #SBATCH -q inferno
 #SBATCH --mail-type=BEGIN,END,FAIL
-#SBATCH --array=0-45%20
+#SBATCH --array=0-3%20
 #SBATCH -o /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/log/0408_020-assembly_out.16
 #SBATCH -e /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/log/0408_020-assembly_err.16
 
@@ -31,4 +31,4 @@ if [[ ! -d "$SAMPLE_DIR" ]]; then
 fi
 
 echo "Assembling sample: $SAMPLE_ID"
-metaspades.py -1 "$R1" -2 "$R2" -o "${SAMPLE_DIR}/{SAMPLE_ID}_metaspades"
+metaspades.py -1 "$R1" -2 "$R2" -o "${SAMPLE_DIR}/${SAMPLE_ID}_metaspades"
