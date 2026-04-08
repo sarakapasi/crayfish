@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -J binning
+#SBATCH -J coverage
 #SBATCH -A gts-ktk3-coda20
 #SBATCH -n 4
 #SBATCH --mem=100GB
@@ -7,8 +7,8 @@
 #SBATCH -q inferno
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --array=0-3%20
-#SBATCH -o /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/log/0408_030-binning_out.16
-#SBATCH -e /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/log/0408_030-binning_err.16
+#SBATCH -o /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/log/0408_030-coverage_out.16
+#SBATCH -e /storage/home/hcoda1/0/skapasi3/r-ktk3-0/FishData/log/0408_030-coverage_err.16
 
 source /storage/home/hcoda1/0/skapasi3/miniconda3/etc/profile.d/conda.sh
 conda activate binning_env #arbitrary conda environment with metabat and maxbin
